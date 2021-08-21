@@ -1,0 +1,89 @@
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style2.css">
+    </head>
+    <body>
+        <script>
+            
+            const socket = io();
+
+            socket.on("message",(data)=>{
+                console.log("got a message");
+                var y = document.createElement("H1");
+                var d = document.createElement("data");
+                var yy = document.createAttribute("id");
+
+                var dd = document.createAttribute("id");
+                var name = document.createTextNode(data.name);
+                dd.value="new";
+                d.setAttributeNode(dd);
+                d.appendChild(name);
+
+
+                var main = document.getElementsByClassName("chat");
+                var msg = document.createTextNode(data.message);
+
+                yy.value="friend";
+                y.setAttributeNode(yy);
+                y.appendChild(msg);
+                y.appendChild(d);
+                main[0].appendChild(y);
+
+
+            })
+            $(document).ready(function(){
+            
+
+                $("#btn").click(function(){
+                var x = $("#msg").val();
+                socket.emit("message",x)
+                var y = document.createElement("H1");
+                var yy = document.createAttribute("id");
+                var main = document.getElementsByClassName("chat");
+                var msg = document.createTextNode(x);
+                yy.value="you";
+                y.setAttributeNode(yy);
+                y.appendChild(msg);
+                main[0].appendChild(y);
+
+
+
+                $("msg").val("");
+                })});
+                
+
+        </script>
+        
+<div class="container_2">
+    <a href="/changePage">
+    <input type="button" id="buttons" value="Change my room"></a>
+    <input type="button" id="buttons" value="Home">
+    
+</div>
+        <div class="containter">
+            <div class="chat">
+                <div class="chat">
+
+
+                   
+
+                </div>
+            </div>
+        </div>
+        <input type="text" id="msg">
+        <input type="image" src="/button.png" width="30px" id="btn">
+
+<img src="/images.png" id="img">
+
+
+
+    </body>
+</html>

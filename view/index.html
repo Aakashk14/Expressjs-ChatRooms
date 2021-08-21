@@ -1,0 +1,39 @@
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="https://cdn.socket.io/4.1.2/socket.io.min.js" integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="newstyle.css">
+    </head>
+    <body>
+      <script>
+
+          $(document).ready(function(){
+              $("#username").val("abc");
+              $("#password").val("password");
+              $("#username").focus(function(){
+                  $("#username").val("");
+              })
+              $("#password").focus(function(){
+                  $("#password").val("");
+              })
+          })
+      </script>
+        <div class="containter">
+            <form action="/auth" method="get">
+           <input type="text" id="username" name="username">
+           <input type="password" id="password" name="password" value="password">
+           <input type="submit" value="Submit" id="submit"> 
+           </form>
+        </div>
+
+<img src="images.png" id="img">
+
+    </body>
+</html>

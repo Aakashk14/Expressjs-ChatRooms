@@ -1,0 +1,140 @@
+body{
+    background-color:rgb(7, 124, 144);
+
+}
+
+#img{
+    position: relative;
+    left:800px;
+    top:0px;
+
+}
+/*{
+    width: 400px;
+    height:600px;
+    resize: none;
+    border-radius: 2%;
+} */
+
+.containter{
+    position: absolute;
+    display:block;
+    overflow: auto;
+    border:8px solid blue;
+    background-color: rgb(128, 229, 245);
+    border: 2px solid rgb(7, 124, 144) ;
+    width: 400px;
+    top:100px;
+    height: 400px;
+    left:40px;
+    border-radius: 2%;
+}
+.containter::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+  .containter::-webkit-scrollbar{
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  .containter::-webkit-scrollbar-thumb{
+    background-color: #000000;
+    border: 2px solid #555555;
+  }
+#msg{
+    position: absolute;
+    top:510px;
+    left:200px;
+    height:80px;
+    width: 200px;
+    border: 2px solid rgb(143, 228, 241) ;
+    border-radius: 10%;
+    background-color:rgb(143, 228, 241);
+}
+input:focus{
+    outline: none;
+}
+.chat{
+    position:relative;
+    top:0%;
+    font-size: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#friend{
+    position: relative;
+    display: block;
+    word-wrap: break-word;
+    border: 2px solidrgb(5, 56, 105);
+     width: 340px;
+    margin: 5px;
+    float:left;
+    color: white;
+    border-radius: 5px;
+    padding:25px;
+    font-size: 15px;
+    background-color:rgb(5, 56, 105);
+}
+#friend_name{
+    position: absolute;
+    display: block;
+    border: 2px solid red;
+    top:2px;
+    font-size: 13px;
+    color:rgb(9, 95, 59);
+    font-family: 'Noto Serif', serif;
+}
+#new{
+    display: block;
+    /*position: absolute;
+    top:50px;
+    */
+    color:rgb(192, 199, 154);
+    font-family: 'Noto Serif', serif;
+    font-size: 13px;
+
+}
+#you{
+    display: block;
+    float:right;
+    margin: 2px;
+    float:right;
+    color:white;
+    border-radius: 5px;
+    margin:5px;
+    padding: 10px;
+    background-color:rgb(1, 12, 22);
+
+}
+#btn{
+    position: absolute;
+    top:70%;
+    left:420px;
+}
+
+#username{
+    position: absolute;
+    top:180px;
+    left:120px;
+    height: 40px;
+    border: 20px;
+    border-radius: 20px;
+}
+#password{
+    position: absolute;
+    top:240px;
+    left:120px;
+    height: 40px;
+    border: 20px;
+    border-radius: 20px;
+}
+
+#submit{
+    position: absolute;
+    top:290px;
+    left:250px;
+    height: 40px;
+    border: 5px solid;
+    border-radius: 20px;
+    
+}
